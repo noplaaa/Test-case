@@ -1,8 +1,6 @@
 module.exports = mongoose => {
-  const emailRules = require('../utilities/rules/email.rules')
-  const passRules = require('../utilities/rules/pass.rules')
-  const cityRules = require('../utilities/rules/city.rules')
-
+  const emailRules = require('../../utilities/rules/email.rules')
+  const passRules = require('../../utilities/rules/pass.rules')
   const schema = mongoose.Schema({
     email: {
       type: String,
@@ -26,11 +24,6 @@ module.exports = mongoose => {
     },
     address: {
       type: String,
-      required: true,
-    },
-    cityId: {
-      type: String,
-      validate: cityRules,
       required: true,
     },
     hobbies: String,
